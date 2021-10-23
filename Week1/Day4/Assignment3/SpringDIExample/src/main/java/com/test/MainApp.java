@@ -1,0 +1,18 @@
+package com.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+public class MainApp {
+	public static void main(String[] args) {
+
+		ApplicationContext factory = new ClassPathXmlApplicationContext("com/test/applicationContext.xml");
+
+		Employee emp = (Employee) factory.getBean("e");
+		emp.setName("Employee_name");
+		emp.show();
+
+
+	}
+}
